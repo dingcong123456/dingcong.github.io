@@ -18,5 +18,13 @@
   "homepage": "https://github.com/dingcong123456/dingcong.github.io#readme",
   "dependencies": {
     "hexo": "^5.4.0"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
