@@ -17,7 +17,10 @@
   },
   "homepage": "https://github.com/dingcong123456/dingcong.github.io#readme",
   "dependencies": {
-    "hexo": "^5.4.0"
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "hexo": "^5.4.0",
+    "husky": "4.0.0"
   },
   "devDependencies": {
     "cz-conventional-changelog": "^3.3.0"
@@ -25,6 +28,11 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS || (node scripts/pre-commit.js&&exit 8)"
     }
   }
 }
